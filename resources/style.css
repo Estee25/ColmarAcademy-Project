@@ -19,6 +19,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box; /*padding と border の幅を要素の幅と高さに含める.*/
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -43,4 +44,490 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*reset css end*/
+/*end reset css*/
+
+/*Universal style*/
+html, body {
+  font-family: 'Script', sans-serif;
+  font-size; 14px;
+  color: #474747;
+}
+.container {
+	width: 100%;
+	overflow: auto;/*Floatで失った高さを復活させるため追加*/
+}
+.container:nth-child(even) {
+	background-color: #C9C9C9;
+}
+h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 2rem;
+}
+h3 {
+	line-height: 1.5rem;
+}
+/*navigation*/
+nav {
+	display: flex;
+	height: 64px;
+}
+.navigation {
+	background-color: #40e0d0;
+	display: flex;
+}
+.navigation ul {
+	display: flex;
+	align-self: center;/*navの垂直ラインの中心にする　子要素に設定のプロパティ*/
+}
+.header_logo {
+	flex-grow: 1;
+	display: flex;/*ロゴと名前を横並びにする*/
+}
+
+.navigation li {
+	margin-left: 16px;
+  background-color: white;
+	line-height: 64px;
+}
+.navigation li:first-child {
+	margin-left: 0;
+}
+.navigation li:last-child {
+padding-right: 24px;
+}
+.header_logo img, span {
+	display: inline-block;
+	align-self: center;/*ロゴと名前を揃えるにする　子要素に設定のプロパティ*/
+}
+span {
+	line-height: 32px;
+	font-family: 'Lato:400' sans-serif;
+	font-weight: bold;
+}
+.academy {
+	color: #B5B5B5;
+	font-weight: lighter;
+}
+img {
+	margin-left: 24px;
+}
+
+.responsive_nav {
+	display: none;
+}
+
+
+/*top*/
+
+.main_banner {
+  float: left;
+	width: 60%;
+	border: thin solid black;
+	overflow: auto;/*imgのはみ出しを防ぐ*/
+}
+.main_side {
+	float: right;
+	width: 40%;
+	border: thin solid black;
+}
+.main_banner img {
+max-width: 100%;
+margin: 32px 24px 32px 24px;
+
+}
+.side_inner {
+	max-width: auto;
+	border: thin solid red;
+  margin-left: 24px;
+	margin-top: 30%;
+}
+.button {
+	background-color: #4F453E;
+	display: inline-block;
+	padding: 8px 80px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.button a {
+	color: white;
+	text-decoration: none;
+}
+.side_inner h2 {
+	margin-bottom: 5%;
+}
+
+
+/*intro*/
+
+.articles_banner {
+	margin-top: 32px;
+	float: left;
+	width: 60%;
+	border: thin solid black;
+	overflow: auto;/*imgのはみ出しを防ぐ*/
+}
+.articles_side {
+	float: right;
+	width: 40%;
+	border: thin solid black;
+	margin-top: 32px;
+}
+.articles_banner img {
+	width: 100%;
+}
+.articles_banner h2 {
+	margin-top: 32px;
+  margin-bottom: 24px;
+	margin-left: 24px;
+}
+.articles_banner p {
+	line-height: 1.5rem;
+	margin-left: 32px;
+}
+.editor {
+	margin-bottom: 32px;
+	margin-top: 32px;
+	margin-left: 24px;
+}
+.article {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	margin-bottom: 8%;
+	padding-right: 2%;
+}
+.article img {
+	width: 35%;
+	height: auto;
+}
+.article_right {
+	width: 65%;
+	border: thin solid black;
+	margin-left: 5%;
+}
+.article_right h3 {
+	font-weight: bold;
+}
+.article_right span {
+	color: blue;
+	font-weight: lighter;
+}
+.article_right p {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	line-height: 1.5rem;
+}
+.articles_side .article:last-child {
+	background-color: #C9C9C9;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+.mobile {
+	display: none;
+}
+
+
+/*下記のクエリが効かない*/
+/*
+@media only screen and (min-width:501px) and (max-width:745) {
+	.articles_banner {
+		width: 100%;
+
+	}
+	.articles_side {
+		width: 100%;
+	}
+
+}
+*/
+/*learning section*/
+#learning {
+	width: 100%;
+}
+ .title_start {
+	border: thin solid red;
+  padding-top: 32px;
+	padding-bottom: 32px;
+	font-size: 2rem;
+	text-align: center;
+}
+.inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border: thin solid black;
+	padding-left: 72px;
+	padding-right: 40px;
+	width: 100%;
+}
+.course {
+	width: 26%;
+	overflow: auto;
+	border: thin solid black;
+	background-color: white;
+	margin-right: 32px;
+	margin-bottom: 32px;
+	padding-bottom: 24px;
+}
+.course img {
+	width: 100%;
+	margin-left: 0;
+}
+.course h3 {
+	font-weight: bold;
+	margin-top: 16px;
+	margin-bottom: 8px;
+	padding-left: 16px;
+}
+.course p:last-child {
+	margin-top: 8px;
+}
+.course p {
+	line-height: 1.2rem;
+	padding-left: 16px;
+}
+.inner_responsive_menu {
+	display: none;
+}
+
+
+/*
+@media only screen and (max-width:745px) {
+	.inner {
+		width: 100%;
+	}
+	.course {
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+		border: thin solid blue;
+	}
+	.course p {
+		padding-right: 1rem;
+	}
+
+/*2列にしたい*/
+/*
+@media only screen and (min-width:746px) and (max-width:900px) {
+	.inner {
+		width: 100%;
+	}
+	.course {
+		width: 50%;
+		margin: 0;
+		padding: 0;
+	}
+	.course img {
+		width: 100%;
+
+}
+
+
+/*thesis*/
+.video_banner {
+	margin-top: 32px;
+	float: left;
+	width: 60%;
+	overflow: auto;/*imgのはみ出しを防ぐ*/
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.video_side {
+	float: right;
+	width: 40%;
+	margin-top: 32px;
+}
+.video_banner h3 {
+	font-weight: bold;
+	margin-top: 24px;
+	margin-bottom: 8px;
+}
+.video_banner p {
+	line-height: 1.5rem;
+	padding-bottom: 32px;
+}
+.video_side .article {
+	width: 100%;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+.video_side .article:first-child {
+	background-color: #C9C9C9;
+}
+
+.title_thesis {
+	padding-top: 32px;
+	padding-bottom: 16px;
+	text-align: center;
+	font-size: 2rem;
+	width: 100%;
+}
+
+/*footer*/
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 24px;
+	padding-left: 24px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+.policy {
+	display: flex;
+}
+.policy p {
+	margin-left: 10px;
+}
+
+/*media query(header)*/
+@media only screen and (max-width:600px) {
+	.responsive_nav {
+		display: block;
+		width: 100%;
+	}
+	.header_logo, .navigation {
+		display: none;
+	}
+	.responsive_nav ul {
+		display: flex;
+		text-align: center;
+		width: 100%;
+		height: 64px;
+		border: thin solid red;
+    justify-content: space-around;
+	}
+	.responsive_nav li {
+		display: flex;
+		margin-right: 0.7rem;
+	}
+
+	}
+	/*meida query(top)*/
+	@media only screen and (max-width:500px) {
+	.main_banner, .main_side {
+		width: 100%;
+		overflow: hidden;
+	}
+	.main_banner img {
+		width: 100%;
+		margin: 0;
+	}
+	.side_inner {
+		margin-top: 32px;
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+	.side_inner h2 {
+		font-size: 2rem;
+	}
+	.side_inner h3 {
+		font-size: 1.3rem;
+	}
+	.side_inner .button {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 32px;
+		font-size: 1.3rem;
+	}
+	}
+	/*media query(intro)*/
+	@media only screen and (max-width:500px) {
+		.articles_banner {
+			display: none;
+		}
+		.articles_side {
+			width: 100%;
+		}
+		.article {
+			flex-direction: column;
+	    border: thin solid red;
+			overflow: hidden;
+			width: 100%;
+		}
+		.articles_side .article:last-child {
+	  background-color: white;
+		}
+	  .article .normal {
+		  display: none;
+	  }
+	  .article .mobile {
+		  display: block;
+			width: 100%;
+			padding-left: 16px;
+			padding-right: 16px;
+	  }
+		}
+		.article_right {
+	  margin-bottom: 32px;
+		margin-top: 32px;
+		margin-left: 16px;
+		width: 80%;
+		}
+		.article_right h3 {
+			font-size: 1.3rem;
+		}
+	}
+	/*media query (course)*/
+	@media only screen and (max-width:500px) {
+		.inner {
+			display: none;
+		}
+		.inner_responsive_menu {
+			display: block;
+		}
+		#learning {
+			background-color: white;
+		}
+
+		.inner_responsive_menu li {
+			border: thin solid black;
+			font-size: 1.5rem;
+			padding-top: 16px;
+			padding-bottom: 24px;
+			background-color: #C9C9C9;
+			margin: 8px;
+			padding-left: 16px;
+		}
+	  .inner_responsive_menu li:last-child {
+			margin-bottom: 32px;
+		}
+	}
+/*media query (video)*/
+
+@media only screen and (max-width:500px) {
+	.video_banner h3, .video_banner p, .video_side {
+		display: none;
+	}
+	.video_banner {
+		width: 100%;
+		padding: 0
+	}
+	video {
+	width: 100%;
+	height: auto;
+	}
+}
+
+@media only screen and (max-width:745px) {
+	.video_banner {
+		width: 100%;
+	}
+	.video_side {
+		width: 100%;
+	}
+}
+/*media query(footer)*/
+@media only screen and (max-width:500px) {
+	.policy {
+		display: none;
+	}
+	.copyright {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+	.copyright p {
+		font-size: 0.9rem;
+	}
+}
