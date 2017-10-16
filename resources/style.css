@@ -123,22 +123,18 @@ img {
 .main_banner {
   float: left;
 	width: 60%;
-	border: thin solid black;
 	overflow: auto;/*imgのはみ出しを防ぐ*/
 }
 .main_side {
 	float: right;
 	width: 40%;
-	border: thin solid black;
 }
 .main_banner img {
 max-width: 100%;
 margin: 32px 24px 32px 24px;
-
 }
 .side_inner {
 	max-width: auto;
-	border: thin solid red;
   margin-left: 24px;
 	margin-top: 30%;
 }
@@ -164,13 +160,11 @@ margin: 32px 24px 32px 24px;
 	margin-top: 32px;
 	float: left;
 	width: 60%;
-	border: thin solid black;
 	overflow: auto;/*imgのはみ出しを防ぐ*/
 }
 .articles_side {
 	float: right;
 	width: 40%;
-	border: thin solid black;
 	margin-top: 32px;
 }
 .articles_banner img {
@@ -203,7 +197,6 @@ margin: 32px 24px 32px 24px;
 }
 .article_right {
 	width: 65%;
-	border: thin solid black;
 	margin-left: 5%;
 }
 .article_right h3 {
@@ -227,26 +220,11 @@ margin: 32px 24px 32px 24px;
 	display: none;
 }
 
-
-/*下記のクエリが効かない*/
-/*
-@media only screen and (min-width:501px) and (max-width:745) {
-	.articles_banner {
-		width: 100%;
-
-	}
-	.articles_side {
-		width: 100%;
-	}
-
-}
-*/
 /*learning section*/
 #learning {
 	width: 100%;
 }
  .title_start {
-	border: thin solid red;
   padding-top: 32px;
 	padding-bottom: 32px;
 	font-size: 2rem;
@@ -256,7 +234,6 @@ margin: 32px 24px 32px 24px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	border: thin solid black;
 	padding-left: 72px;
 	padding-right: 40px;
 	width: 100%;
@@ -264,7 +241,6 @@ margin: 32px 24px 32px 24px;
 .course {
 	width: 26%;
 	overflow: auto;
-	border: thin solid black;
 	background-color: white;
 	margin-right: 32px;
 	margin-bottom: 32px;
@@ -290,39 +266,6 @@ margin: 32px 24px 32px 24px;
 .inner_responsive_menu {
 	display: none;
 }
-
-
-/*
-@media only screen and (max-width:745px) {
-	.inner {
-		width: 100%;
-	}
-	.course {
-		width: 100%;
-		margin-right: 0;
-		margin-left: 0;
-		border: thin solid blue;
-	}
-	.course p {
-		padding-right: 1rem;
-	}
-
-/*2列にしたい*/
-/*
-@media only screen and (min-width:746px) and (max-width:900px) {
-	.inner {
-		width: 100%;
-	}
-	.course {
-		width: 50%;
-		margin: 0;
-		padding: 0;
-	}
-	.course img {
-		width: 100%;
-
-}
-
 
 /*thesis*/
 .video_banner {
@@ -404,8 +347,9 @@ footer {
 	}
 
 	}
-	/*meida query(top)*/
+	/*meida query*/
 	@media only screen and (max-width:500px) {
+		/*top*/
 	.main_banner, .main_side {
 		width: 100%;
 		overflow: hidden;
@@ -431,9 +375,8 @@ footer {
 		margin-bottom: 32px;
 		font-size: 1.3rem;
 	}
-	}
-	/*media query(intro)*/
-	@media only screen and (max-width:500px) {
+
+	/*intro*/
 		.articles_banner {
 			display: none;
 		}
@@ -442,7 +385,6 @@ footer {
 		}
 		.article {
 			flex-direction: column;
-	    border: thin solid red;
 			overflow: hidden;
 			width: 100%;
 		}
@@ -458,7 +400,7 @@ footer {
 			padding-left: 16px;
 			padding-right: 16px;
 	  }
-		}
+
 		.article_right {
 	  margin-bottom: 32px;
 		margin-top: 32px;
@@ -468,9 +410,7 @@ footer {
 		.article_right h3 {
 			font-size: 1.3rem;
 		}
-	}
-	/*media query (course)*/
-	@media only screen and (max-width:500px) {
+	/*course*/
 		.inner {
 			display: none;
 		}
@@ -482,7 +422,6 @@ footer {
 		}
 
 		.inner_responsive_menu li {
-			border: thin solid black;
 			font-size: 1.5rem;
 			padding-top: 16px;
 			padding-bottom: 24px;
@@ -493,10 +432,7 @@ footer {
 	  .inner_responsive_menu li:last-child {
 			margin-bottom: 32px;
 		}
-	}
-/*media query (video)*/
-
-@media only screen and (max-width:500px) {
+  /*video*/
 	.video_banner h3, .video_banner p, .video_side {
 		display: none;
 	}
@@ -508,18 +444,7 @@ footer {
 	width: 100%;
 	height: auto;
 	}
-}
-
-@media only screen and (max-width:745px) {
-	.video_banner {
-		width: 100%;
-	}
-	.video_side {
-		width: 100%;
-	}
-}
-/*media query(footer)*/
-@media only screen and (max-width:500px) {
+	/*footer*/
 	.policy {
 		display: none;
 	}
@@ -529,5 +454,44 @@ footer {
 	}
 	.copyright p {
 		font-size: 0.9rem;
+	}
+}
+
+@media only screen and (max-width:745px) {
+
+	/*intro*/
+	.articles_banner {
+		width: 100%;
+	}
+	.articles_side {
+		width: 100%;
+	}
+	/*learning*/
+	.inner {
+		width: 100%;
+	}
+	.course {
+		width: 100%;
+	}
+	.course p {
+		padding-right: 1rem;
+	}
+
+	/*thesis*/
+	.video_banner {
+		width: 100%;
+	}
+	.video_side {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width:900px) {
+	/*learning*/
+	.inner {
+		width: 100%;
+	}
+	.course {
+		width: 40%;
 	}
 }
